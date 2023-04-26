@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="text-end">
+            <button mat-button class="button back-button" (click)="back()">
+                <mat-icon>arrow_back</mat-icon>
+                Back
+            </button>
+        </div>
+    </div>
+    <mat-card class="my-5 patient-card">
+        <mat-card-header class="patient-card-header">
+            <mat-card-title>Precscreption Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p><strong>Precscreption ID : </strong> {{newPrecscreption._id}}</p>
+            <p><strong>Precscreption Date :</strong> {{newPrecscreption.date}}</p>
+            <p><strong>Clinic Number : </strong> {{newPrecscreption.clinicRef}}</p>
+            <p><strong>Patient Number : </strong> {{newPrecscreption.patientRef}}</p>
+            <p><strong>Doctor Number : </strong> {{newPrecscreption.doctorRef}}</p>
+            <strong>Medications List : </strong>
+            <br><br>
+            <div class="table-responsive">
+                <table class="table table-borderd styled-table " style="width:80%;margin: 0 auto;">
+                    <thead>
+                        <tr style="text-align: center;">
+                            <th>No.</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Dose</th>
+                            <th>Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let medications of newPrecscreption.medications;let i=index;" style="text-align: center;">
+                            <td>{{i+1}}</td>
+                            <td>{{medications.name}}</td>
+                            <td>{{medications.type}}</td>
+                            <td>{{medications.dose}}</td>
+                            <td>{{medications.frequency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <p><strong>Instructions : </strong> {{newPrecscreption.instructions}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

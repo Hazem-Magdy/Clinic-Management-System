@@ -1,0 +1,28 @@
+.mat-mdc-card-header{
+  padding:16px 0 8px 0 !important;
+}
+
+p {
+  margin: 0 !important
+}
+
+.card-style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.card-height{
+  height: fit-content;
+}
+
+.serviceCard{
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 900px) {
+  .card-style {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

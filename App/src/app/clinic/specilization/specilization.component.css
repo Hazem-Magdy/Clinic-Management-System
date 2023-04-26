@@ -1,0 +1,29 @@
+.cardContainer {
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardContainer:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.imgmg {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0 !important
+}
+
+.card-style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+  .card-style {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
